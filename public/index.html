@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kotten och stubben – på, under, bredvid, mellan (åk 1–3)</title>
+<meta name="description" content="Peka på platsen där Kotten ska stå: på stubben, under bänken, bredvid stenen eller mellan två saker. Bilden visar målet och frasen läses upp på svenska. Tränar lägesord, matematik åk 1–3. Gratis, ingen inloggning.">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="Kotten och stubben">
+<meta property="og:description" content="Var ska Kotten stå? Peka på rätt plats – på, under, bredvid eller mellan. Matematik åk 1–3: lägesord.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.skolappar.com/kotten.js" defer></script>
+</head>
+<body>
+
+<!-- START:startskarm -->
+<div id="startskarm">
+  <div class="sk-inner">
+    <img class="sk-ikon" src="icon-192.png" alt="" width="96" height="96">
+    <h1>Kotten och stubben</h1>
+    <p class="sk-tagline">Peka på platsen där Kotten ska stå.</p>
+    <div class="sk-taggar">
+      <span>Matte</span><span>Åk 1–3</span><span>Lägesord</span>
+    </div>
+    <button class="sk-play" id="spela" aria-label="Spela Kotten och stubben">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      Spela
+    </button>
+    <p class="sk-fot">Gratis · ingen inloggning · skolappar.com</p>
+    <details class="sk-laroplan">
+      <summary>Läroplanskoppling (Lgr22)</summary>
+      <p><b>Matematik, åk 1–3, centralt innehåll:</b> ”Vanliga lägesord för att beskriva föremåls och objekts läge i rummet.”</p>
+      <p>Kotten ska stå någonstans i skogen: på stubben, på bänken, på stenen, bredvid stenen, under bänken eller mellan två saker. Målkortet längst upp visar en liten bild av den platsen, frasen skrivs ut och läses upp på svenska, och barnet pekar på platsen i den stora bilden. Fel svar kostar inget – Kotten funderar och barnet får en ny chans; efter två försök pulserar rätt plats. Nivå 1 tränar <i>på</i> och <i>bredvid</i>, nivå 2 lägger till <i>under</i> och nivå 3 <i>mellan</i>, där barnet måste hålla två saker i huvudet samtidigt. Källa: Skolverket, läroplanen för grundskolan (Lgr22).</p>
+    </details>
+  </div>
+</div>
+<!-- SLUT:startskarm -->
+
+<main id="spel" hidden>
+  <header class="hud">
+    <div class="mal">
+      <svg id="mal-svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+      <span id="mal-text"></span>
+    </div>
+    <div class="hud-mitten">
+      <span id="kotten-hud"></span>
+      <span class="prickar" id="prickar" aria-label="uppgifter klara"></span>
+      <span class="stjarnor" id="stjarnor" aria-label="stjärnor"></span>
+    </div>
+    <div class="hud-hoger">
+      <button class="ikon-knapp" id="hjalp" aria-label="Läs upp var Kotten ska stå igen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3l4-3v12l-4-3H4z"/><path d="M15 8a5 5 0 0 1 0 8"/></svg>
+      </button>
+      <button class="ikon-knapp" id="ljud" aria-label="Ljud på eller av">
+        <svg viewBox="0 0 24 24" aria-hidden="true" id="ljudikon"></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="brada">
+    <svg id="scen" viewBox="0 0 1000 660" preserveAspectRatio="xMidYMax meet" aria-label="Skogen med en stubbe, en bänk och en sten. Peka på platsen där Kotten ska stå."></svg>
+  </section>
+
+  <footer class="kotten-rad">
+    <span id="kotten"></span>
+  </footer>
+</main>
+
+<div id="overlay" hidden>
+  <div class="ov-inner">
+    <div id="ov-bild"></div>
+    <h2 id="ov-titel"></h2>
+    <p id="ov-text"></p>
+    <div class="ov-knappar">
+      <button class="knapp stor" id="ov-nasta"></button>
+      <button class="knapp tyst" id="ov-niva" hidden>Byt nivå</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

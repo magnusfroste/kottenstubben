@@ -1,0 +1,139 @@
+/* Kotten och stubben. Kotten-familjens färger: papper, en accent (tallgrön)
+   och stjärnguld. Skogen har tre jordnära toner som bara används i bilden. */
+:root{
+  --papper:#faf7f2;
+  --bläck:#14181f;
+  --dämpad:#4a5260;
+  --accent:#2f7d5a;
+  --accent-mörk:#215c41;
+  --stjärna:#e8a33d;
+  --fel:#c9503f;
+  --kort:#ffffff;
+  --linje:#e3ddd2;
+  --mark:#e9e0cf;
+  --mark-kant:#d8cbb3;
+  --gras:#b9c99f;
+  --moln:#efe9dd;
+  --ring:#b9ab92;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden}
+body{
+  background:var(--papper);
+  color:var(--bläck);
+  font:400 18px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  touch-action:manipulation;
+  overscroll-behavior:none;
+  -webkit-text-size-adjust:100%;
+  user-select:none;
+}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,p{margin:0}
+
+/* ---------- Startskärm ---------- */
+#startskarm{
+  position:fixed;inset:0;z-index:40;
+  display:grid;place-items:center;
+  background:var(--papper);
+  padding:16px;overflow:auto;
+}
+.sk-inner{width:min(92vw,560px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.sk-ikon{width:clamp(72px,12vmin,108px);height:auto;border-radius:26%;box-shadow:0 8px 22px rgba(20,24,31,.14)}
+#startskarm h1{font-size:clamp(25px,4.6vmin,44px);font-weight:800;letter-spacing:-.028em}
+.sk-tagline{color:var(--dämpad);font-size:clamp(16px,2.3vmin,22px)}
+.sk-taggar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:2px}
+.sk-taggar span{
+  font-size:clamp(13px,1.7vmin,16px);font-weight:600;color:var(--accent-mörk);
+  background:color-mix(in srgb,var(--accent) 12%,#fff);
+  padding:5px 12px;border-radius:999px
+}
+.sk-play{
+  margin-top:8px;border:0;background:var(--accent);color:#fff;font-weight:700;
+  font-size:clamp(19px,2.8vmin,26px);
+  padding:16px 44px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;
+  box-shadow:0 10px 22px rgba(47,125,90,.34);min-height:56px;
+}
+.sk-play:active{transform:translateY(1px)}
+.sk-play svg{width:1em;height:1em;fill:#fff}
+.sk-fot{color:var(--dämpad);opacity:.85;font-size:clamp(12px,1.6vmin,15px)}
+.sk-laroplan{margin-top:6px;text-align:left;width:100%;color:var(--dämpad);font-size:14px}
+.sk-laroplan summary{font-size:14px;cursor:pointer;list-style:none;text-align:center;opacity:.8}
+.sk-laroplan p{margin-top:8px;line-height:1.4}
+
+/* ---------- Spelet ---------- */
+#spel{display:flex;flex-direction:column;height:100dvh;padding:8px clamp(8px,2vw,20px);gap:4px}
+.hud{display:flex;align-items:center;justify-content:space-between;gap:clamp(6px,1.6vw,18px);flex:0 0 auto}
+
+/* Målkortet: en liten bild av den plats Kotten ska stå på, med frasen under. */
+.mal{
+  display:flex;align-items:center;gap:10px;
+  background:var(--kort);border:2px solid var(--linje);border-radius:16px;
+  padding:6px 12px 6px 6px;
+}
+#mal-svg{
+  display:block;width:clamp(96px,17vmin,164px);height:clamp(72px,12.75vmin,123px);
+  border-radius:10px;background:var(--papper);
+}
+#mal-text{font-size:clamp(16px,2.3vmin,24px);font-weight:700;color:var(--accent-mörk);max-width:14ch;line-height:1.15}
+
+.hud-mitten{display:flex;align-items:center;gap:clamp(8px,1.6vmin,16px);flex-wrap:wrap;justify-content:center}
+#kotten-hud svg,.kotten-hud{width:clamp(28px,4.4vmin,42px);height:clamp(28px,4.4vmin,42px)}
+.prickar{display:flex;gap:5px}
+.prickar i{width:clamp(8px,1.4vmin,12px);height:clamp(8px,1.4vmin,12px);border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 22%,#fff);border:1px solid color-mix(in srgb,var(--accent) 35%,#fff)}
+.prickar i.klar{background:var(--accent);border-color:var(--accent)}
+.stjarnor{font-size:clamp(16px,2.4vmin,23px);color:var(--stjärna);letter-spacing:2px;line-height:1}
+.hud-hoger{display:flex;gap:6px}
+.ikon-knapp{
+  width:clamp(44px,6.4vmin,54px);height:clamp(44px,6.4vmin,54px);border-radius:14px;
+  border:1px solid var(--linje);background:var(--kort);
+  display:grid;place-items:center;
+}
+.ikon-knapp svg{width:62%;height:62%;fill:none;stroke:var(--bläck);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ikon-knapp:active{background:var(--linje)}
+
+.brada{flex:1 1 auto;min-height:0;display:flex}
+#scen{width:100%;height:100%;display:block;touch-action:manipulation}
+
+.kotten-rad{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:0}
+.kotten-svg{width:clamp(30px,5vmin,48px);height:clamp(30px,5vmin,48px)}
+
+/* Platserna i skogen: osynlig tryckyta + streckad ring där Kotten ska stå */
+.plats{cursor:pointer;touch-action:manipulation}
+.plats-ring{transition:stroke .2s,stroke-width .2s}
+.plats:active .plats-ring{stroke:var(--accent)}
+.plats:focus{outline:none}
+.plats:focus-visible .plats-ring{stroke:var(--accent)}
+
+.knapp{
+  border:0;background:var(--accent);color:#fff;font-weight:700;
+  padding:12px 22px;border-radius:999px;font-size:clamp(16px,2.2vmin,20px);
+  min-height:52px;box-shadow:0 6px 16px rgba(47,125,90,.28);
+}
+.knapp:active{transform:translateY(1px)}
+.knapp.stor{font-size:clamp(19px,2.6vmin,24px);padding:16px 40px;min-height:60px}
+.knapp.tyst{background:var(--kort);color:var(--dämpad);border:1px solid var(--linje);box-shadow:none}
+
+/* ---------- Överlägg (rundan klar) ---------- */
+#overlay{
+  position:fixed;inset:0;z-index:30;background:var(--papper);
+  display:grid;place-items:center;padding:20px;text-align:center;
+}
+.ov-inner{width:min(92vw,520px);display:flex;flex-direction:column;align-items:center;gap:10px}
+#ov-bild svg{width:clamp(70px,12vmin,120px);height:auto}
+#ov-titel{font-size:clamp(26px,4.4vmin,42px);font-weight:800}
+#ov-text{color:var(--dämpad);font-size:clamp(16px,2.2vmin,20px)}
+.ov-knappar{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+[hidden]{display:none !important}
+
+@media (max-height:520px){ .sk-laroplan{display:none} }
+@media (max-height:560px){ .kotten-rad{display:none} }
+@media (max-width:700px){ #mal-text{max-width:9ch;font-size:15px} }
+
+@media (prefers-reduced-motion:no-preference){
+  .plats.ratt .plats-ring{animation:glöd 1.6s ease-in-out infinite}
+  .plats.fel .plats-ring{animation:skaka .45s}
+  @keyframes glöd{0%,100%{opacity:.4}50%{opacity:1}}
+  @keyframes skaka{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+}
