@@ -1,0 +1,25 @@
+/* Genererad av ljudify – text till färdig mp3-fil. */
+window.__ROST = {
+ "Vanliga lägesord för att beskriva\n   föremåls och objekts läge i rummet.": "f72497d65b",
+ "på stubben": "9058302664",
+ "bänken": "9e9c9512e7",
+ "på bänken": "38ff58ca9d",
+ "på stenen": "0a27abd903",
+ "under bänken": "68a337a597",
+ "mellan stubben och bänken": "82a4df670e",
+ "mellan bänken och stenen": "4b27c1fe8a",
+ "Sätt Kotten": "4850c432b2",
+ "Kotten står på": "364dd16bd0",
+ "Kotten står under": "3ae4a441d8",
+ "Kotten står bredvid": "0921f8c359",
+ "Kotten står": "6480e5b5a5",
+ "Titta här.": "eb425a3e64",
+ "Titta på bilden.": "5c9bce4cb6",
+ "Rundan är klar.": "85c2b2674f",
+ "rätt.": "de6c81e0fd",
+ "Rundan är klar!": "d195cca401",
+ "stjärnor totalt.": "75523124e4",
+ "Nu blir det svårare!": "b2aab7948d",
+ "Nu kan Kotten också stå under bänken.": "bf1257e811",
+ "Nu kan Kotten också stå mellan två saker.": "f040230a5c"
+};
