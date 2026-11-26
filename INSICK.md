@@ -1,7 +1,7 @@
 # Inskick till katalogen – Kotten och stubben
 
 - **Titel:** Kotten och stubben
-- **URL:** https://kottenstubben.shipholm.dev (branded: https://kottenstubben.skolappar.com)
+- **URL:** https://kottenstubben.shipholm.dev (branded: https://kottenstubben.skolappar.org)
 - **Kort beskrivning (max ~140 tecken):** Peka på platsen där Kotten ska stå – på stubben, under
   bänken, bredvid stenen eller mellan två saker. Bilden visar målet, frasen läses upp.
 - **Typ:** Spel

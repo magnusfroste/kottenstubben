@@ -97,12 +97,12 @@ def manifest():
             {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
-    (P / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://kottenstubben.skolappar.com/sitemap.xml\n",
+    (P / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://kottenstubben.skolappar.org/sitemap.xml\n",
                                   encoding="utf-8")
     (P / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        ' <url><loc>https://kottenstubben.skolappar.com/</loc></url>\n'
+        ' <url><loc>https://kottenstubben.skolappar.org/</loc></url>\n'
         '</urlset>\n', encoding="utf-8")
 
 

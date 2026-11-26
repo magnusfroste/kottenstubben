@@ -33,7 +33,7 @@ liggande, 86 px i stående på iPad), allt ryms på en skärm, och fel kostar in
 - Återkoppling + nytt försök: fel svar flyttar inte uppgiften vidare, efter två fel pulserar
   rätt plats.
 - Ingen inloggning, ingen reklam, inga länkar ut, ingen tredjeparts-CDN (kodsnutten från
-  skolappar.com är den enda externa resursen).
+  skolappar.org är den enda externa resursen).
 - Korrekt faktа: platserna och lägesorden kontrolleras av `verify.mjs` (120 000 uppgifter, 0 fel).
 - Tryckytor: varje plats har en osynlig tryckyta med diameter 128 världsenheter och alla ligger
   minst 2r+16 ifrån varandra (kontrolleras i `verify.mjs`).
